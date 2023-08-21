@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Code by Marvelene Osha -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Newsletter sign-up form with success message</title>
+
+</head>
+<body>
+  <div class="main">
+    <div class="container">
+      <div class="card-container">
+        <div class="left-section">
+          <h1>Stay updated!</h1>
+          
+          <p>Join 60,000+ product managers receiving monthly updates on:</p> 
+          <ul>
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more!</li>
+          </ul>
+
+          <div id="form">
+              <form onclick="validateForm(event)">
+                <label for="email">Email Address <small id="emailError"></small></label>
+                <input type="email" name="email" id="email" placeholder="email@company.com" required>
+              
+                <input type="submit" value="Subscribe to monthly newsletter">
+              </form>
+          </div>
+        </div>
+
+        <div class="right-section">
+          <picture>
+            <source media="(max-width: 1440px)" srcset="assets/images/illustration-sign-up-desktop.svg">
+            <img src="assets/images/illustration-sign-up-mobile.svg" alt="image" id="image">
+          </picture>
+        </div>
+
+      </div>
+      <div class="success">
+        <img src="assets/images/icon-success.svg" alt="success icon">
+        <h1>Thanks for subscribing!</h1>  
+          
+        <p>A confirmation email has been sent to <strong class="submit-email">ash@loremcompany.com</strong>.
+          Please open it and click the button in the mail to confirm your subscription.</p>  
+          
+        <button type="button" id="dismiss">Dismiss message</button>  
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
